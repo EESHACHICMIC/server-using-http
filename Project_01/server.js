@@ -10,8 +10,8 @@ http.createServer(async function (req, res) {
         res.writeHead(200)
         // res.write('<h1>Hello World</h1>')
         res.end(JSON.stringify(student));
-
     }
+
     else if (req.method === 'POST') {
         var body = "";
         await req.on('data', (data) => {
@@ -55,7 +55,7 @@ http.createServer(async function (req, res) {
         let gender = body.gender
         let status = body.status
         let index = users.findIndex((user) => {
-            return 
+            return
         })
 
     }
