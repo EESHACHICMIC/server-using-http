@@ -41,6 +41,24 @@ http.createServer(async function (req, res) {
         });
 
     }
+    else if (req.method === 'PUT') {
+        let id = parseInt(req.url.slice(1));
+        console.log("Id:", id);
+        let bodys = "";
+        await req.on('data', (data) => {
+            data = data.toString();
+            bodys += data;
+        })
+
+        body = JSON.parse(bodys)
+        let first_name = body.first_name
+        let gender = body.gender
+        let status = body.status
+        let index = users.findIndex((user) => {
+            return 
+        })
+
+    }
     else {
         res.writeHead(404, { 'Content-Type': 'text/json' });
 
