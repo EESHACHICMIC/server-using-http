@@ -55,7 +55,7 @@ http.createServer(async function (req, res) {
         let gender = body.gender
         let status = body.status
         let index = users.findIndex((user) => {
-            return
+            return stu.id === id;
         })
 
     }
