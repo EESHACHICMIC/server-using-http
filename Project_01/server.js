@@ -1,5 +1,5 @@
 const http = require('http')
-const port = 5000;
+const port = 5050;
 const student = require('./student')
 const emp = require('./emp')
 
@@ -39,24 +39,6 @@ http.createServer(async function (req, res) {
             });
 
         });
-
-    }
-    else if (req.method === 'PUT') {
-        let id = parseInt(req.url.slice(1));
-        console.log("Id:", id);
-        let bodys = "";
-        await req.on('data', (data) => {
-            data = data.toString();
-            bodys += data;
-        })
-
-        body = JSON.parse(bodys)
-        let first_name = body.first_name
-        let gender = body.gender
-        let status = body.status
-        let index = users.findIndex((user) => {
-            return stu.id === id;
-        })
 
     }
     else {
